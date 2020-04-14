@@ -1,9 +1,8 @@
-const fs = require('fs');
 const path = require('path');
 
-/**
- * get an array of the files under the give path
- */
+const fs = require('fs');
+
+
 function iterateFiles(source) {
 	let fileList = [];
 	return new Promise((res, rej) => {
@@ -31,9 +30,8 @@ function iterateFiles(source) {
 									fileList = fileList.concat(list);
 									return res();
 								});
-							} else {
+							} else 
 								return res();
-							}
 						});
 					});
 				})
